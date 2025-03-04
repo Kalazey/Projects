@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0a0a0a;
+}
+
+.container{
+    height: 100vh;
+    width: 70vw;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+#link{
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins','sans-serif';
+    color: #a0a0a0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+
+#link:after{
+    content: "";
+    position: absolute;
+    background-color: #ff3c78;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+#link:hover{
+    color: #ffffff;
+}
+
+#link:hover::after{
+    width: 100%;
+}
